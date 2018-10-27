@@ -1,0 +1,7 @@
+<h1>Blockchain</h1>
+
+<ul *ngIf="blockchain">
+	<li *ngFor="let block of blockchain">
+		<p>Hash: {{ block.hash }}</p>
+	</li>
+</ul>
