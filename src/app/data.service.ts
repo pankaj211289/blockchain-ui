@@ -17,7 +17,7 @@ export class DataService {
   }
 
   loadWallet(walletDetails) {
-  	return this.http.post('http://localhost:9090/loadWallet', walletDetails) {
+  	return this.http.post('http://localhost:9090/loadWallet', walletDetails, {
      	headers: new HttpHeaders({
 			'Content-Type' : 'application/json',
 	 		'Accept': 'application/json'
