@@ -8,9 +8,23 @@ import { DataService } from '../data.service';
 })
 export class NewWalletComponent implements OnInit {
 
+  newWallet: Object;
+
   constructor(private data: DataService) { }
 
   ngOnInit() {
   }
 
+  createNewWallet() {
+  	this.data.createNewWallet().subscribe(data => {
+  		this.newWallet = data
+  		console.log(this.newWallet)
+  	});
+  }
+
+  copyInputMessage(inputElement){
+    inputElement.select();
+    document.execCommand('copy');
+    inputElement.setSelectionRange(0, 0);
+  }
 }

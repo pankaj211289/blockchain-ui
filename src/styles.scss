@@ -32,3 +32,22 @@ section {
     margin: 0 auto;
     padding: 2em;
 }
+
+.styledContainer {
+    font-family: 'Montserrat';
+    font-size: 18px;
+}
+
+.styledButton {
+    background-color: #26a494;
+    font-family: 'Montserrat';
+    font-size: 18px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+}

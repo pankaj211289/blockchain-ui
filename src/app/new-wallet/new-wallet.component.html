@@ -1,3 +1,13 @@
 <h1>New Wallet</h1>
 
-<button (click)="newWallet()">Create a new account</button>
+<button (click)="createNewWallet()" class="styledButton">Create a new account</button>
+
+<div *ngIf="newWallet">
+	<h2>Public Key : </h2> 
+	<input type="text" value="{{newWallet.publicKey}}" #pkey size="120" class="styledContainer">
+    <button (click)="copyInputMessage(pkey)" class="styledContainer">..</button>
+	
+	<h2>Private Key : </h2> 
+	<input type="text" value="{{newWallet.privateKey}}" #prkey size="120" class="styledContainer">
+    <button (click)="copyInputMessage(prkey)" class="styledContainer">..</button>
+</div>

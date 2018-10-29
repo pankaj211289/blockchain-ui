@@ -1,3 +1,5 @@
-<p>
-  view-wallet works!
-</p>
+<h2>Public Key : </h2> 
+<input type="text" #pkey size="120" class="styledContainer" [(ngModel)]="pKeyValue">
+<h2>Private Key : </h2> 
+<input type="text" #prkey size="120" class="styledContainer" [(ngModel)]="prKeyValue">
+<h2><button (click)="submitWalletDetails()" class="styledContainer">Submit</button></h2>
