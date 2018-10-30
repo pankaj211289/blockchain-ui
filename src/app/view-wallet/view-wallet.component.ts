@@ -12,8 +12,10 @@ export class ViewWalletComponent implements OnInit {
 
   walletDetails: Object;
   wallet: Wallet;
-  pKeyValue = ""
-  prKeyValue = ""
+  pKeyValue = "";
+  prKeyValue = "";
+  recipient = "";
+  dataToRecipient = "";
 
   constructor(private data: DataService) { 
   	this.wallet = new Wallet();
@@ -25,6 +27,7 @@ export class ViewWalletComponent implements OnInit {
   submitWalletDetails(pKey, prKey){
     this.wallet.publicKey = this.pKeyValue;
     this.wallet.privateKey = this.prKeyValue;
+
 
     console.log(JSON.stringify(this.wallet))
 
