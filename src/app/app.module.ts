@@ -9,6 +9,9 @@ import { NavComponent } from './nav/nav.component';
 import { NewWalletComponent } from './new-wallet/new-wallet.component';
 import { ViewWalletComponent } from './view-wallet/view-wallet.component';
 import { BlockchainComponent } from './blockchain/blockchain.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { AccordionModule } from 'ngx-bootstrap/accordion';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,13 @@ import { BlockchainComponent } from './blockchain/blockchain.component';
     BrowserModule,
     AppRoutingModule, 
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgbModule,
+    CollapseModule,
+    AccordionModule.forRoot()
+  ],
+  exports: [
+    AccordionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
