@@ -1,4 +1,20 @@
-<h1>Blockchain</h1>
+<div class="alert alert-success" *ngIf="showSuccessAlert">
+	<button type="button" class="close" (click)="switchBool('showSuccessAlert')">×</button> 
+	<strong>Successfully added Open Transactions to new Block!</strong>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col">
+		  <h1>Blockchain</h1>
+		</div>
+		<div class="col">
+		  <h2><button style="float: right;" (click)="mineBlock()" class="styledButton">Add Transactions to Blockchain</button></h2>
+		</div>
+	</div>
+</div>
+<br/>
+
 
 
 <ul *ngIf="blockchain">

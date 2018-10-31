@@ -18,11 +18,24 @@ export class DataService {
 
   loadWallet(walletDetails) {
   	return this.http.post('http://localhost:9090/loadWallet', walletDetails, {
-     	headers: new HttpHeaders({
-			'Content-Type' : 'application/json',
-	 		'Accept': 'application/json'
-		})
-	});
+       	headers: new HttpHeaders({
+  			'Content-Type' : 'application/json',
+  	 		'Accept': 'application/json'
+  		  })
+	  });
+  }
+
+  createNewTransaction(transaction) {
+    return this.http.post('http://localhost:9090/addTransaction', transaction, {
+         headers: new HttpHeaders({
+        'Content-Type' : 'application/json',
+         'Accept': 'application/json'
+        })
+    });
+  }
+
+  mineBlock() {
+    return this.http.post('http://localhost:9090/mine', '');
   }
 }
 

@@ -10,6 +10,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 export class BlockchainComponent implements OnInit {
 
   blockchain: Object;
+  showSuccessAlert: boolean = false;
 
   constructor(private data: DataService) { }
 
@@ -21,4 +22,18 @@ export class BlockchainComponent implements OnInit {
   	});
   }
 
+  mineBlock() {
+    this.data.mineBlock().subscribe(data => {
+      this.showSuccessAlert = true;
+      
+      this.data.displayBlockchain().subscribe(data => {
+        this.blockchain = data
+        console.log(this.blockchain)
+      });
+    });
+  }
+
+  switchBool(showSuccessAlert) {
+    this.showSuccessAlert = !showSuccessAlert;
+  }
 }
